@@ -474,5 +474,151 @@
   }
 }
 
+.contacts {
+  &__inner {
+    display: flex;
+    padding-left: 25px;
+  }
+
+  &__info {
+    width: 240px;
+    margin-right: 60px; 
+  }
+
+  &__info-box {
+    margin-bottom: 30px;
+  }
+
+  &__info-title {
+    margin: 0 0 13px;
+
+    @extend %ubuntu-bold;
+    font-size: 21px;
+    line-height: 24px;
+  }
+
+  &__info-phone,
+  &__info-email {
+    @extend %ubuntu-light;
+    font-size: 15px;
+    line-height: 18px;
+  }
+
+  &__info-email:hover {
+    text-decoration: underline;
+  }
+
+  &__form {
+    width: 570px;
+    margin-right: 106px;
+  }
+
+  &__form-title {
+    @extend %ubuntu-bold;
+    font-size: 21px;
+    line-height: 24px;
+  }
+
+  &__form-text {
+    margin: 0 0 12px;
+
+    @extend %ubuntu-light;
+    font-size: 15px;
+    line-height: 18px;
+  }
+
+  &__form-line {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+
+  &__form-input,
+  &__form-textarea {
+    padding: 15px;
+
+    @extend %ubuntu-regular;
+    font-size: 13px;
+    line-height: 17px;
+    color: #ffffff;
+
+    background: rgba(0, 0, 0, 0.5);
+    border: none;
+
+    &::placeholder {
+      color: rgba($color: #ffffff, $alpha: 0.4)
+    }
+  }
+
+  &__form-input {
+    width: 49%;
+  }
+
+  &__form-textarea {
+    min-height: 144px;
+    width: 100%;
+    margin-bottom: 20px;
+
+    resize: none;
+  }
+
+  &__form-btn {
+    padding: 9px 15px;
+
+    @extend %ubuntu-bold;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: #ffffff;
+
+    border: 1px solid #FFFFFF;
+    border-radius: 2px;
+    background-color: transparent;
+
+    cursor: pointer;
+    transition: all 0.3s;
+
+    &:hover {
+      color: #1C1C1C;
+      background-color: #ffffff;
+    }
+  }
+
+  &__social-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  &__social-item {
+    margin: 12px 0;
+  }
+
+  &__social-link {
+    opacity: 0.5;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
+
+.footer {
+  position: absolute;
+  bottom: 32px;
+  left: 0;
+  right: 0;
+
+  &__copy {
+    text-align: right;
+    @extend %ubuntu-light;
+    font-size: 13px;
+    line-height: 17px;
+
+    opacity: 0.64;
+  }
+}
+
 
 @import "media";
